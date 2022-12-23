@@ -1,0 +1,31 @@
+header{
+    overflow: hidden;
+}
+
+.header_items{
+    animation: HeaderConnect 1s;
+}
+
+
+@keyframes HeaderConnect{
+    0%{
+        transform: translateX(1000px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+.header_main{
+    animation: HeaderMain 1s;
+}
+
+@keyframes HeaderMain{
+    0%{
+        transform: translateX(-1000px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
