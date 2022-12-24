@@ -168,6 +168,17 @@ html {
         left: 80% !important;
         transform: translateX(-80%) !important;
     }
+
+.feedbacks_header h2  {
+    font-size: 24px;
+}
+
+.feedbacks_header p  {
+    font-size: 18px;
+}
+    
+    
+
 }
 
 @media(max-width:990px) {
@@ -455,7 +466,8 @@ html {
     .equipments .equimpent_imgs .grid_element img,
     .tranding-slider .swiper-wrapper .grid_element img {
     height: 490px;
-    object-fit: cover;
+    object-fit: cover;    
+    border-radius: 12px;
     }
 
 }
