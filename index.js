@@ -31,6 +31,9 @@
 
 //   // }
 // });
+window.onload = function(){
+  scroll(0,0)
+}
 
 
 let table = document.getElementById('section_items');
@@ -62,8 +65,7 @@ const closed = document.getElementById("close")
 const menu = document.getElementById("menu")
 
 
-burger.addEventListener('click', (e) => {
-  console.log('shj', menu);
+burger.addEventListener('click', () => {
   menu.classList.toggle('active');
   menu.style.display = 'block'
   burger.style.display = 'none'
@@ -71,12 +73,37 @@ burger.addEventListener('click', (e) => {
 
 });
 
-closed.addEventListener('click', (e) => {
-
+menu.addEventListener('click', () => {
+  menu.classList.remove('active')
   menu.style.display = 'none'
   burger.style.display = 'block'
-  closed.style.display = 'none'
-})
+  closed.style.display = 'none';
+});
+
+
+closed.addEventListener('click', () => {
+  menu.classList.remove('active')
+  menu.style.display = 'none'
+  burger.style.display = 'block'
+  closed.style.display = 'none';
+});
+
+
+
+// burger.addEventListener('click', (e) => {
+//   menu.classList.toggle('active');
+//   menu.style.display = 'block'
+//   burger.style.display = 'none'
+//   closed.style.display = 'block'
+
+// });
+
+// closed.addEventListener('click', (e) => {
+
+//   menu.style.display = 'none'
+//   burger.style.display = 'block'
+//   closed.style.display = 'none'
+// })
 
 
 let section_items = document.querySelectorAll('.section_item')
@@ -108,16 +135,16 @@ section_hide_button.addEventListener('click', () => {
 var TrandingSlider = new Swiper('.tranding-slider', {
   grabCursor: true,
   loop: true,
-  slidesPerView:1,
+  slidesPerView: 1,
   breakpoints: {
-      1000:{
-          slidesPerView: 3
-      },
-      700:{
-          slidesPerView:2
-      },
+    1000: {
+      slidesPerView: 3
+    },
+    700: {
+      slidesPerView: 2
+    },
   },
-  spaceBetween:25,
+  spaceBetween: 25,
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
@@ -129,7 +156,7 @@ var TrandingSlider = new Swiper('.tranding-slider', {
 });
 
 
-const  submit = document.getElementById('submit') 
+const submit = document.getElementById('submit')
 const thank = document.querySelector(".thank")
 
 submit.addEventListener("click", (e) => {
@@ -143,32 +170,32 @@ const video = document.querySelector(".cleaning_mp4")
 
 
 button.addEventListener("click", () => {
-    if(video.paused){
-        video.play();
-        img.style.opacity = '0';
-        img.style.trancition = '1s';
-        button.style.trancition = '1s';
-        button.style.opacity  = '0';
-        setTimeout(() => {
-          img.style.zIndex = '-1';
-          button.style.zIndex  = '-1';
-        }, 400)
-    }else{
-      img.style.opocity = '1';
-      button.style.opocity  = '1'
-      img.style.zIndex = '1';
-      button.style.zIndex  = '1';
-      img.style.trancition = '1s';
-      button.style.trancition = '1s';
-    }
+  if (video.paused) {
+    video.play();
+    img.style.opacity = '0';
+    img.style.trancition = '1s';
+    button.style.trancition = '1s';
+    button.style.opacity = '0';
+    setTimeout(() => {
+      img.style.zIndex = '-1';
+      button.style.zIndex = '-1';
+    }, 400)
+  } else {
+    img.style.opocity = '1';
+    button.style.opocity = '1'
+    img.style.zIndex = '1';
+    button.style.zIndex = '1';
+    img.style.trancition = '1s';
+    button.style.trancition = '1s';
+  }
 })
 
 video.addEventListener("ended", () => {
   img.style.zIndex = '1';
-  button.style.zIndex  = '1';
+  button.style.zIndex = '1';
   setTimeout(() => {
     img.style.opacity = '1';
-    button.style.opacity  = '1'
+    button.style.opacity = '1'
     img.style.trancition = '1s';
     button.style.trancition = '1s';
   }, 500)

@@ -37,7 +37,7 @@ html {
 
 .equipments .equimpent_imgs .grid_element img,
 .tranding-slider .swiper-wrapper .grid_element img {
-    width: 100%;
+    width: 100%;    
 }
 
 
@@ -429,7 +429,9 @@ html {
     .contact-from .address_container .second_part ul {
         display: flex;
         justify-content: start;
-    gap: 30px;
+        gap: 30px;
+        margin-bottom: 30px;
+        margin-top: -15px;
     }
 
     .contact-from .address_container .first_part ul li {
@@ -448,6 +450,12 @@ html {
         display: block;
         width: 100%;
         max-width: 400px;
+    }
+    
+    .equipments .equimpent_imgs .grid_element img,
+    .tranding-slider .swiper-wrapper .grid_element img {
+    height: 490px;
+    object-fit: cover;
     }
 
 }
@@ -469,13 +477,6 @@ html {
     .contact-from {
         padding: 68px 30px;
     }
-}
-
-@media(max-width:328px) {
-
-    .equipments {
-        padding: 52px 16px;
-    }
 
     .equipments .equimpent_imgs {
         display: none;
@@ -484,6 +485,33 @@ html {
     .equipments .swiper {
         display: block;
     }
+
+    .tranding-slider-control {
+        justify-content: start !important;
+    }
+
+    .tranding-slider-control .swiper-button-prev {
+        left: 55% !important;
+        transform: translateX(90%) !important;
+    }
+
+    .tranding-slider-control .swiper-button-next {
+        left: 90% !important;
+        transform: translateX(-30%) !important;
+    }
+
+    .swiper .swiper-pagination {
+        display: contents;
+    }
+
+}
+
+@media(max-width:328px) {
+
+    .equipments {
+        padding: 52px 16px;
+    }
+
 
     /* __________________________________________________________ */
     .feedbacks {
@@ -552,19 +580,6 @@ html {
         width: 22px !important;
     }
 
-    .tranding-slider-control {
-        justify-content: start !important;
-    }
-
-    .tranding-slider-control .swiper-button-prev {
-        left: 55% !important;
-        transform: translateX(90%) !important;
-    }
-
-    .tranding-slider-control .swiper-button-next {
-        left: 90% !important;
-        transform: translateX(-30%) !important;
-    }
 
     .swiper-wrapper .grid_element img {
         width: 100%;
@@ -596,6 +611,10 @@ html {
         font-size: 16px;
     }
 
+    .contact-from .address_container .second_part ul {
+        padding-bottom: 30px;
+    }
+
 
     .contact-from .form_container p {
         font-size: 14px;
@@ -604,12 +623,11 @@ html {
     .contact-from form {
         margin: 25px 0 16px;
     }
-        
-    .swiper .swiper-pagination{
-        display: contents;
-    }
 
-    .thankyou_info {font-size: 12px;}
+
+    .thankyou_info {
+        font-size: 12px;
+    }
 }
 
 
